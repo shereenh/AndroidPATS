@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_map2"
+            android:layout_weight="0.11"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/title_text_size"
+            android:text="@string/mapview_title"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin1">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_height"
+            android:layout_marginLeft="@dimen/space"
+            android:orientation="horizontal"
+            android:background="@color/colorAccent"
+            />
+
+    </LinearLayout>
+    <!--<com.google.android.gms.maps.MapView-->
+        <!--android:id="@+id/mapView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/lin2"/>-->
+
+    <LinearLayout
+        android:id="@+id/lin3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin2"
+        >
+
+        <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorrecyclerviewtitle"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/titlesize"
+        >
+
+            <TextView
+            android:id="@+id/txtTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="-- min"
+            android:textColor="#006400"/>
+            <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/txtDistance"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="0 km"
+            android:textColor="#636363"/>
+        </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+        <Button
+        android:layout_marginLeft="10dp"
+        android:id="@+id/viewshiftlog_btn"
+        android:drawableLeft="@drawable/ic_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:text="View Shiftlog Map"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:layout_weight="0.2"
+        android:textStyle="bold" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+        <ImageButton
+        android:id="@+id/route_btn"
+        android:layout_marginRight="@dimen/titlesize"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_route"
+        />
+     </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
